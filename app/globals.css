@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-foreground text-muted overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-variant-ligatures: none;
+    -webkit-font-feature-settings: "liga" 0, "clig" 0, "calt" 0;
+    -moz-font-feature-settings: "liga" 0, "clig" 0, "calt" 0;
+    -ms-font-feature-settings: "liga" 0, "clig" 0, "calt" 0;
+    font-feature-settings: "liga" 0, "clig" 0, "calt" 0;
+  }
+}
+:root {
+  --round: 0.625rem;
+  --foreground: 20, 20, 21;
+  --text: 240, 4%, 95%;
+  --muted: 240, 4%, 70%;
+  --secondary: 240, 4%, 13%;
+  --secondary-1: 240, 4%, 18%;
+  --secondary-2: 240, 4%, 35%;
+  --primary: 240, 33%, 53%;
+  --primary-1: 240, 38%, 53% ;
+  --primary-2: 240, 50%, 67%;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: hsl(var(--secondary));
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--secondary-2));
+}
+.loader {
+  width: 80px;
+  height: 80px;
+  display: block;
+  position: relative;
+  span {
+    display: flex;
+    animation: ani 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: hsl(var(--secondary-2));
+      margin: -4px 0 0 -4px;
+    }
+    &:nth-child(1) {
+      animation-delay: -0.036s;
+      &:after {
+        top: 63px;
+        left: 63px;
+      }
+    }
+    &:nth-child(2) {
+      animation-delay: -0.072s;
+      &:after {
+        top: 68px;
+        left: 56px;
+      }
+    }
+    &:nth-child(3) {
+      animation-delay: -0.108s;
+      &:after {
+        top: 71px;
+        left: 48px;
+      }
+    }
+    &:nth-child(4) {
+      animation-delay: -0.144s;
+      &:after {
+        top: 72px;
+        left: 40px;
+      }
+    }
+    &:nth-child(5) {
+      animation-delay: -0.18s;
+      &:after {
+        top: 71px;
+        left: 32px;
+      }
+    }
+    &:nth-child(6) {
+      animation-delay: -0.216s;
+      &:after {
+        top: 68px;
+        left: 24px;
+      }
+    }
+    &:nth-child(7) {
+      animation-delay: -0.252s;
+      &:after {
+        top: 63px;
+        left: 17px;
+      }
+    }
+    &:nth-child(8) {
+      animation-delay: -0.288s;
+      &:after {
+        top: 56px;
+        left: 12px;
+      }
+    }
+  }
+}
+
+@keyframes ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

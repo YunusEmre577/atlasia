@@ -1,0 +1,22 @@
+[
+    {
+        "title": "All Countries",
+        "icon": "solar:earth",
+        "href": "/"
+    },
+    {
+        "title": "Continents",
+        "icon": "solar:map",
+        "href": "/continents"
+    },
+    {
+        "title": "Search",
+        "icon": "solar:rounded-magnifer",
+        "href": "/search"
+    },
+    {
+        "title": "Saved",
+        "icon": "solar:bookmark",
+        "href": "/saved"
+    }
+]
